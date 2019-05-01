@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Spring Boot Reactive</title>
+</head>
+<body>
+<h1 th:text="|Hello, ${message}|"></h1>
+<h2 th:text="|Number of people: ${#lists.size(people)}|"></h2>
+<ul>
+    <li th:each="person : ${people}"
+        th:text="|${person.firstName} ${person.lastName} (${person.personId})|"></li>
+</ul>
+</body>
+</html>
